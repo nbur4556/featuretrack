@@ -10,7 +10,7 @@ export interface Task {
   priority: TaskPriority
   approval: TaskApproval
   type: TaskType
-  development: string
+  development?: string
   pullRequest?: string
   ticket?: string
   relatedTask?: Task
