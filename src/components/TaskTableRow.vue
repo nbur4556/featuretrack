@@ -5,21 +5,21 @@ const { task } = defineProps<{ task: Task }>()
 
 // maps task parameters to tailwind classes
 const taskColorKey = {
-  not_started: 'bg-statustodo',
-  in_progress: 'bg-statuscurrent',
-  pull_request: 'bg-statuscurrent',
-  done: 'bg-statusdone',
-  bin: 'bg-statusbin',
-  high: 'text-priorityhigh',
-  mid: 'text-prioritymid',
-  low: 'text-prioritylow',
-  assigned: 'text-appassigned',
-  suggested: 'text-appsuggestion',
-  unassigned: 'text-appunassigned',
-  declined: 'text-appdeclined',
-  bug: 'text-typebug',
-  improvement: 'text-typeimprovement',
-  feature: 'text-typefeature'
+  not_started: 'badge-secondary',
+  in_progress: 'badge-primary',
+  pull_request: 'badge-primary',
+  done: 'badge-success',
+  bin: 'badge-error',
+  high: 'badge-error',
+  mid: 'badge-warning',
+  low: 'badge-primary',
+  assigned: 'badge-success',
+  suggested: 'badge-warning',
+  unassigned: 'badge-primary',
+  declined: 'badge-error',
+  bug: 'badge-error',
+  improvement: 'badge-warning',
+  feature: 'badge-success'
 }
 
 const statusClass = taskColorKey[task.status.toLowerCase().split(' ').join('_')]
@@ -37,7 +37,7 @@ const typeClass = taskColorKey[task.type.toLowerCase()]
       <div>{{ task.description }}</div>
     </td>
     <td>
-      <div class="badge badge-info text-white" v-bind:class="statusClass">{{ task.status }}</div>
+      <div class="badge" v-bind:class="statusClass">{{ task.status }}</div>
     </td>
     <td>
       <div class="badge badge-outline" v-bind:class="priorityClass">{{ task.priority }}</div>
