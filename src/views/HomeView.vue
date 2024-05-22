@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import TaskTable from '../components/TaskTable.vue'
-import sampleData from '../data/sampleTasks.json';
+import sampleData from '../data/sampleTasks.json'
 import type { Task } from '../types/Task.ts'
 
-const tasks: Array<Task> = sampleData;
+const tasks: Array<Task> = sampleData as Array<Task>
 </script>
 
 <template>

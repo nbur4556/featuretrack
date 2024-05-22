@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
 import type { Task } from '../types/Task.ts'
+import TaskTableRow from './TaskTableRow.vue'
 
-const props = defineProps<{ tasks: Array<Task> }>()
-const stringifiedData = props.tasks.toString();
-console.log(stringifiedData);
+const { tasks } = defineProps<{ tasks: Array<Task> }>()
 </script>
 
 <template>
-  <h1>Task Table</h1>
-  <p>{{stringifiedData}}</p>
+  <table>
+    <TaskTableRow v-bind:task="tasks[0]" />
+    <TaskTableRow v-bind:task="tasks[1]" />
+    <TaskTableRow v-bind:task="tasks[2]" />
+  </table>
 </template>
