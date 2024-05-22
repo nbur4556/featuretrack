@@ -7,7 +7,9 @@ const { tasks } = defineProps<{ tasks: Array<Task> }>()
 </script>
 
 <template>
-  <table>
-    <TaskTableRow v-for="task in tasks" v-bind:task="task" />
+  <table class="table table-sm">
+    <tbody>
+      <TaskTableRow v-for="task in tasks" v-bind:task="task" />
+    </tbody>
   </table>
 </template>
