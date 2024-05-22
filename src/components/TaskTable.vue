@@ -8,8 +8,6 @@ const { tasks } = defineProps<{ tasks: Array<Task> }>()
 
 <template>
   <table>
-    <TaskTableRow v-bind:task="tasks[0]" />
-    <TaskTableRow v-bind:task="tasks[1]" />
-    <TaskTableRow v-bind:task="tasks[2]" />
+    <TaskTableRow v-for="task in tasks" v-bind:task="task" />
   </table>
 </template>
