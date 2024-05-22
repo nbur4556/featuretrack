@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Task 1",
+    "description": "Task 1 description",
+    "status": "Not Started",
+    "priority": "High",
+    "approval": "Assigned",
+    "type": "Bug",
+    "created": "05/21/2024",
+    "updated": "05/21/2024"
+  },
+  {
+    "name": "Task 2",
+    "description": "Task 2 description",
+    "status": "In Progress",
+    "priority": "Mid",
+    "approval": "Suggested",
+    "type": "Feature",
+    "created": "05/20/2024",
+    "updated": "05/20/2024"
+  },
+  {
+    "name": "Task 3",
+    "description": "Task 3 description",
+    "status": "Done",
+    "priority": "Low",
+    "approval": "Declined",
+    "type": "Improvement",
+    "created": "05/19/2024",
+    "updated": "05/19/2024"
+  }
+]

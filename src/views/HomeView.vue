@@ -1,9 +1,15 @@
 <script setup lang="ts">
-console.log('Hello world')
+import TaskTable from '../components/TaskTable.vue'
+import sampleData from '../data/sampleTasks.json'
+import type { Task } from '../types/Task.ts'
+
+const tasks: Array<Task> = sampleData as Array<Task>
 </script>
 
 <template>
   <main>
-    <h1>Hello World</h1>
+    <h1>FeatureTrack</h1>
+
+    <TaskTable v-bind:tasks="tasks" />
   </main>
 </template>
