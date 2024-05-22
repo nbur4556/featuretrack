@@ -8,7 +8,7 @@ const tasks: Array<Task> = sampleData as Array<Task>
 
 <template>
   <main>
-    <h1>FeatureTrack</h1>
+    <h1 class="text-3xl font-bold underline">FeatureTrack</h1>
 
     <TaskTable v-bind:tasks="tasks" />
   </main>
