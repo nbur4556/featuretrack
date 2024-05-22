@@ -7,8 +7,8 @@ export default {
         // TODO: match colors to daisyui themes
         statustodo: "#5a5a5a5a",
         statuscurrent: "#28456c",
-        statusfail: "#6e3630",
-        statussuccess: "#28593f",
+        statusbin: "#6e3630",
+        statusdone: "#28593f",
         priorityhigh: "#6e3630",
         prioritymid: "#854c1d",
         prioritylow: "#28456c",
