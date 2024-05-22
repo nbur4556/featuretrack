@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import type { Task } from '../types/Task.ts'
 import TaskTableRow from './TaskTableRow.vue'
 
@@ -7,7 +6,17 @@ const { tasks } = defineProps<{ tasks: Array<Task> }>()
 </script>
 
 <template>
-  <table>
-    <TaskTableRow v-for="task in tasks" v-bind:task="task" />
+  <table class="table table-sm">
+    <thead>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Priority</th>
+      <th>Approval</th>
+      <th>Type</th>
+    </thead>
+    <tbody>
+      <TaskTableRow v-for="task in tasks" v-bind:task="task" />
+    </tbody>
   </table>
 </template>

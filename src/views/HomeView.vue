@@ -7,9 +7,10 @@ const tasks: Array<Task> = sampleData as Array<Task>
 </script>
 
 <template>
-  <main>
-    <h1>FeatureTrack</h1>
-
+  <nav class="navbar p-4">
+    <h1 class="font-bold text-xl">FeatureTrack</h1>
+  </nav>
+  <main class="container mx-auto p-8">
     <TaskTable v-bind:tasks="tasks" />
   </main>
 </template>
