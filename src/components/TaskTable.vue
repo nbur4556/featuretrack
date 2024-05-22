@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import type { Task } from '../types/Task.ts'
 import TaskTableRow from './TaskTableRow.vue'
 

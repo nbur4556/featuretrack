@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import type { Task } from '../types/Task.ts'
 
 const { task } = defineProps<{ task: Task }>()
@@ -14,16 +13,16 @@ const { task } = defineProps<{ task: Task }>()
       <div>{{ task.description }}</div>
     </td>
     <td>
-      <div class="badge badge-info">{{ task.status }}</div>
+      <div class="badge badge-info bg-tasktodo text-white">{{ task.status }}</div>
     </td>
     <td>
-      <div class="badge badge-info badge-outline">{{ task.priority }}</div>
+      <div class="badge badge-outline text-taskcurrent">{{ task.priority }}</div>
     </td>
     <td>
-      <div class="badge badge-info badge-outline">{{ task.approval }}</div>
+      <div class="badge badge-outline text-tasksuccess">{{ task.approval }}</div>
     </td>
     <td>
-      <div class="badge badge-info badge-outline">{{ task.type }}</div>
+      <div class="badge badge-outline text-taskfail">{{ task.type }}</div>
     </td>
   </tr>
 </template>
